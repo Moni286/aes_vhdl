@@ -1,0 +1,4 @@
+vhdl isim_temp "sub_bytes.vhd"
+vhdl isim_temp "../../../../mix_columns.vhd"
+vhdl isim_temp "aes_round.vhd"
+vhdl isim_temp "aes_round_tb.vhd"

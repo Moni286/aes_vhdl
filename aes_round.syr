@@ -1,0 +1,977 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: aes_round.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "aes_round.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "aes_round"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : aes_round
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\sub_bytes.vhd" into library work
+Parsing entity <sub_bytes>.
+Parsing architecture <Behavioral> of entity <sub_bytes>.
+Parsing VHDL file "C:\Users\HP\Desktop\mix_columns.vhd" into library work
+Parsing entity <mix_columns>.
+Parsing architecture <Behavioral> of entity <mix_columns>.
+Parsing VHDL file "C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\aes_round.vhd" into library work
+Parsing entity <aes_round>.
+Parsing architecture <Behavioral> of entity <aes_round>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <aes_round> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sub_bytes> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mix_columns> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\aes_round.vhd" Line 97: en should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <aes_round>.
+    Related source file is "C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\aes_round.vhd".
+    Found 128-bit register for signal <round_key>.
+    Found 4-bit register for signal <cnt>.
+    Found 1-bit register for signal <enable_next>.
+    Found 128-bit register for signal <nextState>.
+    Found 128-bit register for signal <round_state>.
+    Found 4-bit adder for signal <cnt[3]_GND_4_o_add_5_OUT> created at line 1241.
+    Found 4-bit comparator greater for signal <cnt[3]_GND_4_o_LessThan_5_o> created at line 103
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 389 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <aes_round> synthesized.
+
+Synthesizing Unit <sub_bytes>.
+    Related source file is "C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\sub_bytes.vhd".
+    Found 128-bit register for signal <sb>.
+    Found 256x8-bit Read Only RAM for signal <b[127]_GND_5_o_wide_mux_0_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[119]_GND_5_o_wide_mux_1_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[111]_GND_5_o_wide_mux_2_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[103]_GND_5_o_wide_mux_3_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[95]_GND_5_o_wide_mux_4_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[87]_GND_5_o_wide_mux_5_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[79]_GND_5_o_wide_mux_6_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[71]_GND_5_o_wide_mux_7_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[63]_GND_5_o_wide_mux_8_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[55]_GND_5_o_wide_mux_9_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[47]_GND_5_o_wide_mux_10_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[39]_GND_5_o_wide_mux_11_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[31]_GND_5_o_wide_mux_12_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[23]_GND_5_o_wide_mux_13_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[15]_GND_5_o_wide_mux_14_OUT>
+    Found 256x8-bit Read Only RAM for signal <b[7]_GND_5_o_wide_mux_15_OUT>
+    Summary:
+	inferred  16 RAM(s).
+	inferred 128 D-type flip-flop(s).
+Unit <sub_bytes> synthesized.
+
+Synthesizing Unit <mix_columns>.
+    Related source file is "C:\Users\HP\Desktop\mix_columns.vhd".
+    Found 128-bit register for signal <outBytes>.
+    Found 256x16-bit Read Only RAM for signal <_n0420>
+    Found 256x16-bit Read Only RAM for signal <_n0677>
+    Found 256x16-bit Read Only RAM for signal <_n0934>
+    Found 256x16-bit Read Only RAM for signal <_n1191>
+    Found 256x16-bit Read Only RAM for signal <_n1448>
+    Found 256x16-bit Read Only RAM for signal <_n1705>
+    Found 256x16-bit Read Only RAM for signal <_n1962>
+    Found 256x16-bit Read Only RAM for signal <_n2219>
+    Found 256x16-bit Read Only RAM for signal <_n2476>
+    Found 256x16-bit Read Only RAM for signal <_n2733>
+    Found 256x16-bit Read Only RAM for signal <_n2990>
+    Found 256x16-bit Read Only RAM for signal <_n3247>
+    Found 256x16-bit Read Only RAM for signal <_n3504>
+    Found 256x16-bit Read Only RAM for signal <_n3761>
+    Found 256x16-bit Read Only RAM for signal <_n4018>
+    Found 256x16-bit Read Only RAM for signal <_n4275>
+    Summary:
+	inferred  16 RAM(s).
+	inferred 128 D-type flip-flop(s).
+Unit <mix_columns> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 32
+ 256x16-bit single-port Read Only RAM                  : 16
+ 256x8-bit single-port Read Only RAM                   : 16
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 1
+ 128-bit register                                      : 5
+ 4-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Xors                                                 : 17
+ 128-bit xor2                                          : 1
+ 8-bit xor4                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <aes_round>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n3761> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[87]_GND_5_o_wide_mux_5_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n3504> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[127]_GND_5_o_wide_mux_0_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n4275> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[7]_GND_5_o_wide_mux_15_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n4018> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[47]_GND_5_o_wide_mux_10_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n2733> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[119]_GND_5_o_wide_mux_1_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n2476> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[31]_GND_5_o_wide_mux_12_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n3247> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[39]_GND_5_o_wide_mux_11_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n2990> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[79]_GND_5_o_wide_mux_6_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n1448> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[63]_GND_5_o_wide_mux_8_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n1705> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[23]_GND_5_o_wide_mux_13_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n2219> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[71]_GND_5_o_wide_mux_7_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n1962> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[111]_GND_5_o_wide_mux_2_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n0677> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[55]_GND_5_o_wide_mux_9_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n0420> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[95]_GND_5_o_wide_mux_4_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n1191> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[103]_GND_5_o_wide_mux_3_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <mixcolumns/Mram__n0934> will be implemented as a BLOCK RAM, absorbing the following register(s): <sbox/sb_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced_sliced>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sbox/b[15]_GND_5_o_wide_mux_14_OUT> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<7:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[15]_GND_5_o_wide_mux_14_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<15:8>>   |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[23]_GND_5_o_wide_mux_13_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<23:16>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[31]_GND_5_o_wide_mux_12_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<31:24>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[39]_GND_5_o_wide_mux_11_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<39:32>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[55]_GND_5_o_wide_mux_9_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<55:48>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[47]_GND_5_o_wide_mux_10_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<47:40>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[63]_GND_5_o_wide_mux_8_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<63:56>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[71]_GND_5_o_wide_mux_7_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<71:64>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[79]_GND_5_o_wide_mux_6_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<79:72>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[87]_GND_5_o_wide_mux_5_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<87:80>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[95]_GND_5_o_wide_mux_4_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<95:88>>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[103]_GND_5_o_wide_mux_3_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<103:96>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[111]_GND_5_o_wide_mux_2_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<111:104>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[127]_GND_5_o_wide_mux_0_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<127:120>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <sbox/Mram_b[119]_GND_5_o_wide_mux_1_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <round_state>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to internal node          | low      |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state<119:112>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <aes_round> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 32
+ 256x16-bit single-port block Read Only RAM            : 16
+ 256x8-bit single-port block Read Only RAM             : 16
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 513
+ Flip-Flops                                            : 513
+# Comparators                                          : 1
+ 4-bit comparator greater                              : 1
+# Xors                                                 : 17
+ 128-bit xor2                                          : 1
+ 8-bit xor4                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT>, <sbox/Mram_b[15]_GND_5_o_wide_mux_14_OUT> are packed into the single block RAM <sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[23]_GND_5_o_wide_mux_13_OUT>, <sbox/Mram_b[31]_GND_5_o_wide_mux_12_OUT> are packed into the single block RAM <sbox/Mram_b[23]_GND_5_o_wide_mux_13_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[39]_GND_5_o_wide_mux_11_OUT>, <sbox/Mram_b[55]_GND_5_o_wide_mux_9_OUT> are packed into the single block RAM <sbox/Mram_b[39]_GND_5_o_wide_mux_11_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[47]_GND_5_o_wide_mux_10_OUT>, <sbox/Mram_b[63]_GND_5_o_wide_mux_8_OUT> are packed into the single block RAM <sbox/Mram_b[47]_GND_5_o_wide_mux_10_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[71]_GND_5_o_wide_mux_7_OUT>, <sbox/Mram_b[79]_GND_5_o_wide_mux_6_OUT> are packed into the single block RAM <sbox/Mram_b[71]_GND_5_o_wide_mux_7_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[87]_GND_5_o_wide_mux_5_OUT>, <sbox/Mram_b[95]_GND_5_o_wide_mux_4_OUT> are packed into the single block RAM <sbox/Mram_b[87]_GND_5_o_wide_mux_5_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[103]_GND_5_o_wide_mux_3_OUT>, <sbox/Mram_b[111]_GND_5_o_wide_mux_2_OUT> are packed into the single block RAM <sbox/Mram_b[103]_GND_5_o_wide_mux_3_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <sbox/Mram_b[127]_GND_5_o_wide_mux_0_OUT>, <sbox/Mram_b[119]_GND_5_o_wide_mux_1_OUT> are packed into the single block RAM <sbox/Mram_b[127]_GND_5_o_wide_mux_0_OUT1>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n3761>, <mixcolumns/Mram__n4275> are packed into the single block RAM <mixcolumns/Mram__n37611>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n3504>, <mixcolumns/Mram__n2476> are packed into the single block RAM <mixcolumns/Mram__n35041>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n4018>, <mixcolumns/Mram__n2733> are packed into the single block RAM <mixcolumns/Mram__n40181>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n3247>, <mixcolumns/Mram__n2990> are packed into the single block RAM <mixcolumns/Mram__n32471>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n1448>, <mixcolumns/Mram__n0420> are packed into the single block RAM <mixcolumns/Mram__n14481>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n1705>, <mixcolumns/Mram__n2219> are packed into the single block RAM <mixcolumns/Mram__n17051>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n1962>, <mixcolumns/Mram__n0677> are packed into the single block RAM <mixcolumns/Mram__n19621>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <mixcolumns/Mram__n1191>, <mixcolumns/Mram__n0934> are packed into the single block RAM <mixcolumns/Mram__n11911>
+
+Optimizing unit <aes_round> ...
+WARNING:Xst:1293 - FF/Latch <cnt_2> has a constant value of 0 in block <aes_round>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cnt_3> has a constant value of 0 in block <aes_round>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block aes_round, actual ratio is 8.
+FlipFlop cnt_1 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 517
+ Flip-Flops                                            : 517
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : aes_round.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 397
+#      GND                         : 1
+#      INV                         : 7
+#      LUT3                        : 4
+#      LUT4                        : 256
+#      LUT5                        : 128
+#      VCC                         : 1
+# FlipFlops/Latches                : 517
+#      FD                          : 385
+#      FDE                         : 132
+# RAMS                             : 16
+#      RAMB8BWER                   : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 386
+#      IBUF                        : 257
+#      OBUF                        : 129
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             517  out of  18224     2%  
+ Number of Slice LUTs:                  395  out of   9112     4%  
+    Number used as Logic:               395  out of   9112     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    523
+   Number with an unused Flip Flop:       6  out of    523     1%  
+   Number with an unused LUT:           128  out of    523    24%  
+   Number of fully used LUT-FF pairs:   389  out of    523    74%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         387
+ Number of bonded IOBs:                 387  out of    232   166% (*) 
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     32    25%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 533   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.060ns (Maximum Frequency: 246.305MHz)
+   Minimum input arrival time before clock: 6.560ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.060ns (frequency: 246.305MHz)
+  Total number of paths / destination ports: 1710 / 793
+-------------------------------------------------------------------------
+Delay:               4.060ns (Levels of Logic = 2)
+  Source:            cnt_0 (FF)
+  Destination:       sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT1 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cnt_0 to sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.525   0.944  cnt_0 (cnt_0)
+     LUT3:I2->O            1   0.254   0.681  _n004711 (_n0047)
+     INV:I->O             16   0.255   1.181  _n0047_inv_INV_0 (_n0047_inv)
+     RAMB8BWER:ENAWREN         0.220          sbox/Mram_b[127]_GND_5_o_wide_mux_0_OUT1
+    ----------------------------------------
+    Total                      4.060ns (1.254ns logic, 2.806ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 533 / 405
+-------------------------------------------------------------------------
+Offset:              6.560ns (Levels of Logic = 3)
+  Source:            en (PAD)
+  Destination:       sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: en to sbox/Mram_b[7]_GND_5_o_wide_mux_15_OUT1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           260   1.328   2.660  en_IBUF (en_IBUF)
+     LUT3:I0->O            1   0.235   0.681  _n004711 (_n0047)
+     INV:I->O             16   0.255   1.181  _n0047_inv_INV_0 (_n0047_inv)
+     RAMB8BWER:ENAWREN         0.220          sbox/Mram_b[127]_GND_5_o_wide_mux_0_OUT1
+    ----------------------------------------
+    Total                      6.560ns (2.038ns logic, 4.522ns route)
+                                       (31.1% logic, 68.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 1)
+  Source:            nextState_127 (FF)
+  Destination:       nextState<127> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: nextState_127 to nextState<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  nextState_127 (nextState_127)
+     OBUF:I->O                 2.912          nextState_127_OBUF (nextState<127>)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.060|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.75 secs
+ 
+--> 
+
+Total memory usage is 271196 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :   48 (   0 filtered)
+

@@ -1,0 +1,26 @@
+vhdtdtfi -lib work sub_bytes.vhd -prj aes_test -o sub_bytes.spl -module sub_bytes -template D:/Programs/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 sub_bytes.spl C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.sym 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 sub_bytes.ngc sub_bytes.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sub_bytes_map.ncd sub_bytes.ngd sub_bytes.pcf 
+par -w -intstyle ise -ol high -mt off sub_bytes_map.ncd sub_bytes.ncd sub_bytes.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sub_bytes.twx sub_bytes.ncd -o sub_bytes.twr sub_bytes.pcf 
+vhdtdtfi -lib work sub_bytes.vhd -prj aes_test -o sub_bytes.spl -module sub_bytes -template D:/Programs/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 sub_bytes.spl C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.sym 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 sub_bytes.ngc sub_bytes.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sub_bytes_map.ncd sub_bytes.ngd sub_bytes.pcf 
+par -w -intstyle ise -ol high -mt off sub_bytes_map.ncd sub_bytes.ncd sub_bytes.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sub_bytes.twx sub_bytes.ncd -o sub_bytes.twr sub_bytes.pcf 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-2 sub_bytes.ngc sub_bytes.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sub_bytes_map.ncd sub_bytes.ngd sub_bytes.pcf 
+par -w -intstyle ise -ol high -mt off sub_bytes_map.ncd sub_bytes.ncd sub_bytes.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml sub_bytes.twx sub_bytes.ncd -o sub_bytes.twr sub_bytes.pcf 
+bitgen -intstyle ise -f sub_bytes.ut sub_bytes.ncd 
+xst -intstyle ise -ifn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.xst" -ofn "C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/sub_bytes.syr" 

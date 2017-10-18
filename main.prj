@@ -1,0 +1,5 @@
+vhdl work "sub_bytes.vhd"
+vhdl work "../../../../mix_columns.vhd"
+vhdl work "aes_round.vhd"
+vhdl work "aes_full.vhd"
+vhdl work "main.vhd"
