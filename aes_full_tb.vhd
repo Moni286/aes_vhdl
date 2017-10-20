@@ -45,7 +45,8 @@ ARCHITECTURE behavior OF aes_full_tb IS
          rkey : IN  std_logic_vector(127 downto 0);
          en : IN  std_logic;
          clk : IN  std_logic;
-         ct : OUT  std_logic_vector(127 downto 0)
+         ct : OUT  std_logic_vector(127 downto 0);
+			round : OUT std_logic_vector(3 downto 0)
         );
     END COMPONENT;
     
@@ -58,6 +59,7 @@ ARCHITECTURE behavior OF aes_full_tb IS
 
  	--Outputs
    signal ct : std_logic_vector(127 downto 0);
+	signal round : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
    constant clk_period : time := 10 ns;
@@ -70,7 +72,8 @@ BEGIN
           rkey => rkey,
           en => en,
           clk => clk,
-          ct => ct
+          ct => ct,
+			 round => round
         );
 
    -- Clock process definitions
@@ -92,7 +95,7 @@ BEGIN
 		pt <= x"00112233445566778899aabbccddeeff";
 		rkey <= x"000102030405060708090a0b0c0d0e0f";
 		
-      wait for clk_period*3;
+      wait for clk_period*1;
 		rkey <= x"d6aa74fdd2af72fadaa678f1d6ab76fe";
 		
 		wait for clk_period*3;

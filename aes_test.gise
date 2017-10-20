@@ -63,6 +63,10 @@
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="keyScheduleTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="keyScheduleTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="keyScheduleTest_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="keyScheduleTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="key_expansion.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="key_expansion.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="key_expansion.ngc"/>
@@ -189,11 +193,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1508283913" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1508283913">
+    <transform xil_pn:end_ts="1508324455" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1508324455">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508321220" xil_pn:in_ck="3580070346542396983" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508321220">
+    <transform xil_pn:end_ts="1508530771" xil_pn:in_ck="-3302951965409905685" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1508530771">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../../../mix_columns.vhd"/>
@@ -201,27 +205,38 @@
       <outfile xil_pn:name="aes_full_tb.vhd"/>
       <outfile xil_pn:name="aes_round.vhd"/>
       <outfile xil_pn:name="aes_round_tb.vhd"/>
-      <outfile xil_pn:name="key_expansion.vhd"/>
-      <outfile xil_pn:name="main_tb.vhd"/>
+      <outfile xil_pn:name="key_RAM.vhd"/>
+      <outfile xil_pn:name="keyexp/keyMux.vhd"/>
+      <outfile xil_pn:name="keyexp/keySchedule.vhd"/>
+      <outfile xil_pn:name="keyexp/keyScheduleTest.vhd"/>
+      <outfile xil_pn:name="keyexp/lrotate.vhd"/>
+      <outfile xil_pn:name="keyexp/rbox.vhd"/>
+      <outfile xil_pn:name="keyexp/rcon.vhd"/>
+      <outfile xil_pn:name="keyexp/reg128.vhd"/>
+      <outfile xil_pn:name="keyexp/roundCounter.vhd"/>
+      <outfile xil_pn:name="keyexp/sbox.vhd"/>
+      <outfile xil_pn:name="keyexp/sbox4B.vhd"/>
+      <outfile xil_pn:name="keyexp/xor8.vhd"/>
+      <outfile xil_pn:name="main.vhd"/>
       <outfile xil_pn:name="mix_columns_tb.vhd"/>
       <outfile xil_pn:name="rol_mod.vhd"/>
       <outfile xil_pn:name="rol_tb.vhd"/>
       <outfile xil_pn:name="sub_bytes.vhd"/>
       <outfile xil_pn:name="sub_bytes_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1508283913" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8284293603913959274" xil_pn:start_ts="1508283913">
+    <transform xil_pn:end_ts="1508527198" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5429010616889527060" xil_pn:start_ts="1508527198">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508283913" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2720016122895317268" xil_pn:start_ts="1508283913">
+    <transform xil_pn:end_ts="1508527198" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8369598021520105110" xil_pn:start_ts="1508527198">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508283913" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5940259444499463142" xil_pn:start_ts="1508283913">
+    <transform xil_pn:end_ts="1508324455" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5940259444499463142" xil_pn:start_ts="1508324455">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1508321220" xil_pn:in_ck="3580070346542396983" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508321220">
+    <transform xil_pn:end_ts="1508530771" xil_pn:in_ck="-3302951965409905685" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1508530771">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../../../../mix_columns.vhd"/>
@@ -229,30 +244,41 @@
       <outfile xil_pn:name="aes_full_tb.vhd"/>
       <outfile xil_pn:name="aes_round.vhd"/>
       <outfile xil_pn:name="aes_round_tb.vhd"/>
-      <outfile xil_pn:name="key_expansion.vhd"/>
-      <outfile xil_pn:name="main_tb.vhd"/>
+      <outfile xil_pn:name="key_RAM.vhd"/>
+      <outfile xil_pn:name="keyexp/keyMux.vhd"/>
+      <outfile xil_pn:name="keyexp/keySchedule.vhd"/>
+      <outfile xil_pn:name="keyexp/keyScheduleTest.vhd"/>
+      <outfile xil_pn:name="keyexp/lrotate.vhd"/>
+      <outfile xil_pn:name="keyexp/rbox.vhd"/>
+      <outfile xil_pn:name="keyexp/rcon.vhd"/>
+      <outfile xil_pn:name="keyexp/reg128.vhd"/>
+      <outfile xil_pn:name="keyexp/roundCounter.vhd"/>
+      <outfile xil_pn:name="keyexp/sbox.vhd"/>
+      <outfile xil_pn:name="keyexp/sbox4B.vhd"/>
+      <outfile xil_pn:name="keyexp/xor8.vhd"/>
+      <outfile xil_pn:name="main.vhd"/>
       <outfile xil_pn:name="mix_columns_tb.vhd"/>
       <outfile xil_pn:name="rol_mod.vhd"/>
       <outfile xil_pn:name="rol_tb.vhd"/>
       <outfile xil_pn:name="sub_bytes.vhd"/>
       <outfile xil_pn:name="sub_bytes_tb.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1508321228" xil_pn:in_ck="3580070346542396983" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8261286525189482740" xil_pn:start_ts="1508321220">
+    <transform xil_pn:end_ts="1508530776" xil_pn:in_ck="-3302951965409905685" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-6912842228559834376" xil_pn:start_ts="1508530771">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="aes_full_tb_beh.prj"/>
-      <outfile xil_pn:name="aes_full_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="keyScheduleTest_beh.prj"/>
+      <outfile xil_pn:name="keyScheduleTest_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1508321228" xil_pn:in_ck="2501563096459193552" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6841521741362204217" xil_pn:start_ts="1508321228">
+    <transform xil_pn:end_ts="1508530776" xil_pn:in_ck="7500247204145987654" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2615104471989147675" xil_pn:start_ts="1508530776">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="aes_full_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="keyScheduleTest_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1507462329" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1507462329">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -288,24 +314,11 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="aes_full.lso"/>
-      <outfile xil_pn:name="aes_full.ngc"/>
-      <outfile xil_pn:name="aes_full.ngr"/>
-      <outfile xil_pn:name="aes_full.prj"/>
-      <outfile xil_pn:name="aes_full.stx"/>
-      <outfile xil_pn:name="aes_full.syr"/>
-      <outfile xil_pn:name="aes_full.xst"/>
-      <outfile xil_pn:name="aes_full_tb_stx_beh.prj"/>
-      <outfile xil_pn:name="aes_full_xst.xrpt"/>
-      <outfile xil_pn:name="aes_round.ngr"/>
-      <outfile xil_pn:name="mix_columns.ngr"/>
-      <outfile xil_pn:name="sub_bytes.ngr"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1507032833" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5345666286474000293" xil_pn:start_ts="1507032833">
       <status xil_pn:value="SuccessfullyRun"/>

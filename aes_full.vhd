@@ -179,7 +179,6 @@ begin
 						state10(31 downto 24) & state10(119 downto 112) & state10(79 downto 72) & state10(39 downto 32);
 	
 	state11 <= after_shiftrows xor rkey;
-	round <= "000" & en1;
 	
 	PROCESS(clk, cnt, en, en9)
 	BEGIN
@@ -190,6 +189,31 @@ begin
 		
 		if rising_edge(clk) and en9 = '1' then
 			ct <= state11;
+			en10 <= '1';
+		end if;
+		
+		if cnt = '0' then
+			round <= "0000";
+		elsif cnt = '1' and en1 = '0' then
+			round <= "0001";
+		elsif en1 = '1' and en2 = '0' then
+			round <= "0010";
+		elsif en2 = '1' and en3 = '0' then
+			round <= "0011";
+		elsif en3 = '1' and en4 = '0' then
+			round <= "0100";
+		elsif en4 = '1' and en5 = '0' then
+			round <= "0101";
+		elsif en5 = '1' and en6 = '0' then
+			round <= "0110";
+		elsif en6 = '1' and en7 = '0' then
+			round <= "0111";
+		elsif en7 = '1' and en8 = '0' then
+			round <= "1000";
+		elsif en8 = '1' and en9 = '0' then
+			round <= "1001";
+		elsif en9 = '1' and en10 = '0' then
+			round <= "1010";
 		end if;
 	END PROCESS;
 
