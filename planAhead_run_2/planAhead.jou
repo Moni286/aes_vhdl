@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Nov 26 11:37:56 2017
+# Process ID: 4452
+# Log file: C:/Users/HP/Desktop/University/Academics/Capstone/aes/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/HP/Desktop/University/Academics/Capstone/aes/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/HP/Desktop/University/Academics/Capstone/aes/pa.fromNcd.tcl

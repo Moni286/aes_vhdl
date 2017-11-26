@@ -1,0 +1,7 @@
+[Inputs]
+inBit
+clk
+[Outputs]
+outBit
+=led_signals[2:0]=
+[BiDir]

@@ -35,11 +35,13 @@ entity toplevel is
 			  r : out std_logic_vector(3 downto 0);
            originalKey : in  STD_LOGIC_VECTOR (127 downto 0);
            plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
-           ciphertext : out  STD_LOGIC_VECTOR (127 downto 0));
+           ciphertext : out  STD_LOGIC_VECTOR (127 downto 0);
+			  done : out STD_LOGIC);
 end toplevel;
 
 architecture Behavioral of toplevel is
-
+	
+	
 	COMPONENT roundCount PORT ( 
 		clk : in  STD_LOGIC;
 		clr : in  STD_LOGIC;
@@ -63,7 +65,7 @@ architecture Behavioral of toplevel is
 		ciphertext : out  STD_LOGIC_VECTOR (127 downto 0));
 	END COMPONENT encrypt;
 	
-	signal roundNumber : STD_LOGIC_VECTOR(3 downto 0) := (others => '0');
+	signal roundNumber : STD_LOGIC_VECTOR(3 downto 0);
 	signal roundKey    : STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
 begin
 
@@ -71,6 +73,19 @@ roundCounter: roundCount  port map(clk, clr, roundNumber);
 keyScheduler: keySchedule port map(clk, clr, roundNumber, originalKey, roundKey);
 encrypter:	  encrypt     port map(clk, clr, roundNumber, roundKey, plaintext, ciphertext);
 r <= roundNumber;
+
+PROCESS(clk)
+BEGIN
+	if rising_edge(clk) then
+		if roundNumber = "1010" and clr = '0' then
+			done <= '1';
+		else
+			done <= '0';
+		end if;
+		
+	end if;
+	
+END PROCESS;
 
 end Behavioral;
 

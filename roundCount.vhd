@@ -45,13 +45,16 @@ begin
 	process(clk, clr)
 	begin
 		
-		if clr = '1' then
-			temp <= X"B";
-		elsif rising_edge(clk) then
-			if temp = X"B" then
-				temp <= X"0";
+		
+		if rising_edge(clk) then
+			if clr = '1' then
+				temp <= X"B";
 			else
-				temp <= temp + 1;
+				if temp = X"B" then
+					temp <= X"0";
+				else
+					temp <= temp + 1;
+				end if;
 			end if;
 		end if;
 	end process;

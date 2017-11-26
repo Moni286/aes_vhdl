@@ -46,7 +46,8 @@ ARCHITECTURE behavior OF toplevelTest IS
          r : OUT  std_logic_vector(3 downto 0);
          originalKey : IN  std_logic_vector(127 downto 0);
          plaintext : IN  std_logic_vector(127 downto 0);
-         ciphertext : OUT  std_logic_vector(127 downto 0)
+         ciphertext : OUT  std_logic_vector(127 downto 0);
+			done : out STD_LOGIC
         );
     END COMPONENT;
     
@@ -60,9 +61,10 @@ ARCHITECTURE behavior OF toplevelTest IS
  	--Outputs
    signal r : std_logic_vector(3 downto 0);
    signal ciphertext : std_logic_vector(127 downto 0);
+	signal done : STD_LOGIC;
 
    -- Clock period definitions
-   constant clk_period : time := 30 ns;
+   constant clk_period : time := 10 ns;
  
 BEGIN
  
@@ -73,7 +75,8 @@ BEGIN
           r => r,
           originalKey => originalKey,
           plaintext => plaintext,
-          ciphertext => ciphertext
+          ciphertext => ciphertext,
+			 done => done
         );
 
    -- Clock process definitions
@@ -92,15 +95,14 @@ BEGIN
       -- hold reset state for 100 ns.
       wait for 100 ns;	
 		clr <= '1';
-		originalKey <= X"5468617473206D79204B756E67204675";
-		plaintext	<= X"54776F204F6E65204E696E652054776F";
+		originalKey <= X"000102030405060708090a0b0c0d0e0f";
+		plaintext	<= X"00112233445566778899aabbccddeeff";
 		
-		wait for 1 ns;
-		clr <= '0';
-		wait for 9 ns;
-
 		wait for clk_period;
 		clr <= '0';
+
+		wait for clk_period * 20;
+		clr <= '1';
 
       -- insert stimulus here 
 
