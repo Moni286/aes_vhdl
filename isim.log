@@ -1,0 +1,2 @@
+ISim log file
+Running: C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\keyScheduleTest_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/HP/Desktop/University/Academics/Capstone/aes_test/keyScheduleTest_isim_beh.wdb 

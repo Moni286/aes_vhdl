@@ -1,0 +1,2 @@
+vhdl work "sub_bytes.vhd"
+vhdl work "sub_bytes_tb.vhd"

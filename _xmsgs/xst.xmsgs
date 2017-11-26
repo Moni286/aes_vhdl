@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="old" >"C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\aes_round.vhd" Line 100: <arg fmt="%s" index="1">en</arg> should be on the sensitivity list of the process
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\aes_full.vhd</arg>&quot; line <arg fmt="%s" index="2">89</arg>: Output port &lt;<arg fmt="%s" index="3">enable_next</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">round1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n3761</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n3504</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n4275</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n4018</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n2733</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n2476</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n3247</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n2990</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n1448</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n1705</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n2219</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n1962</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n0677</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n0420</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n1191</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">mixcolumns/Mram__n0934</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[7]_GND_6_o_wide_mux_15_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[15]_GND_6_o_wide_mux_14_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[23]_GND_6_o_wide_mux_13_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[31]_GND_6_o_wide_mux_12_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[39]_GND_6_o_wide_mux_11_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[55]_GND_6_o_wide_mux_9_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[47]_GND_6_o_wide_mux_10_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[63]_GND_6_o_wide_mux_8_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[71]_GND_6_o_wide_mux_7_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[79]_GND_6_o_wide_mux_6_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[87]_GND_6_o_wide_mux_5_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[95]_GND_6_o_wide_mux_4_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[103]_GND_6_o_wide_mux_3_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[111]_GND_6_o_wide_mux_2_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[127]_GND_6_o_wide_mux_0_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">sbox/Mram_b[119]_GND_6_o_wide_mux_1_OUT</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[7]_GND_6_o_wide_mux_15_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[15]_GND_6_o_wide_mux_14_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[7]_GND_6_o_wide_mux_15_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[23]_GND_6_o_wide_mux_13_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[31]_GND_6_o_wide_mux_12_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[23]_GND_6_o_wide_mux_13_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[39]_GND_6_o_wide_mux_11_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[55]_GND_6_o_wide_mux_9_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[39]_GND_6_o_wide_mux_11_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[47]_GND_6_o_wide_mux_10_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[63]_GND_6_o_wide_mux_8_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[47]_GND_6_o_wide_mux_10_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[71]_GND_6_o_wide_mux_7_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[79]_GND_6_o_wide_mux_6_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[71]_GND_6_o_wide_mux_7_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[87]_GND_6_o_wide_mux_5_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[95]_GND_6_o_wide_mux_4_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[87]_GND_6_o_wide_mux_5_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[103]_GND_6_o_wide_mux_3_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[111]_GND_6_o_wide_mux_2_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[103]_GND_6_o_wide_mux_3_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">sbox/Mram_b[127]_GND_6_o_wide_mux_0_OUT</arg>&gt;, &lt;<arg fmt="%s" index="3">sbox/Mram_b[119]_GND_6_o_wide_mux_1_OUT</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">sbox/Mram_b[127]_GND_6_o_wide_mux_0_OUT1</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n3761</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n4275</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n37611</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n3504</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n2476</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n35041</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n4018</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n2733</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n40181</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n3247</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n2990</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n32471</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n1448</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n0420</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n14481</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n1705</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n2219</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n17051</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n1962</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n0677</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n19621</arg>&gt;
+</msg>
+
+<msg type="info" file="Xst" num="2697" delta="new" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">mixcolumns/Mram__n1191</arg>&gt;, &lt;<arg fmt="%s" index="3">mixcolumns/Mram__n0934</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">mixcolumns/Mram__n11911</arg>&gt;
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">round1/enable_next</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">aes_full</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">round1/cnt_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">aes_full</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="old" > (*) More than 100% of Device resources are used
+</msg>
+
+</messages>
+

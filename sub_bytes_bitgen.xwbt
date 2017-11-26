@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\sub_bytes.ncd
+OUTFILE=C:\Users\HP\Desktop\University\Academics\Capstone\aes_test\sub_bytes.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=C:\Users\HP\Desktop\University\Academics\Capstone\aes_test
+LICENSE=WebPack
+USER_INFO=209294022_0_0_171

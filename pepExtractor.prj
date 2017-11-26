@@ -1,0 +1,4 @@
+work	"../../../../mix_columns.vhd"
+work	"aes_full.vhd"
+work	"aes_round.vhd"
+work	"sub_bytes.vhd"
