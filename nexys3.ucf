@@ -1,9 +1,14 @@
-Net "inBit" LOC = N17 |IOSTANDARD = LVCMOS33;
-Net "outBit" LOC = N18 |IOSTANDARD = LVCMOS33;
-Net "clk" LOC = V10 |IOSTANDARD = LVCMOS33;
-Net "led_signals(0)" LOC = U16 |IOSTANDARD = LVCMOS33;
-Net "led_signals(1)" LOC = V16 |IOSTANDARD = LVCMOS33;
-Net "led_signals(2)" LOC = U15 |IOSTANDARD = LVCMOS33;
+NET "inBit" LOC = N17 |IOSTANDARD = "LVCMOS33";
+NET "outBit" LOC = N18 |IOSTANDARD = "LVCMOS33";
+NET "clk" LOC = V10 |IOSTANDARD = "LVCMOS33";
+NET "led_signals(0)" LOC = U16 |IOSTANDARD = "LVCMOS33";
+NET "led_signals(1)" LOC = V16 |IOSTANDARD = "LVCMOS33";
+NET "led_signals(2)" LOC = U15 |IOSTANDARD = "LVCMOS33";
 #Created by Constraints Editor (xc6slx16-csg324-2) - 2017/11/26
 NET "clk" TNM_NET = clk;
-TIMESPEC TS_clk = PERIOD "clk" 5 ns HIGH 50%;
+TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50%;
+#pin2ucf - Thu Nov 30 17:03:09 2017
+#The following constraints were newly added
+NET "led_signals<0>" LOC = U16;
+NET "led_signals<1>" LOC = V16;
+NET "led_signals<2>" LOC = U15;

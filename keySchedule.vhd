@@ -70,11 +70,6 @@ architecture Behavioral of keySchedule is
 	signal to_sbox4B 	: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
 	signal from_sbox4B: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
 	signal from_rcon 	: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
-	
-	signal to_sbox4B2 	: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
-	signal from_sbox4B2: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
-	signal from_rcon2 	: STD_LOGIC_VECTOR( 31 downto 0) := (others => '0');
-	
 	signal q 			: STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
 	signal from_mux   : STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
 	signal from_register: STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
@@ -95,3 +90,19 @@ q( 31 downto  0) <= q( 63 downto 32) xor from_register( 31 downto  0);
 keyRegister : reg16B port map(clk, clr, from_mux, from_register);
 roundKey <= from_mux;
 end Behavioral;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

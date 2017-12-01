@@ -5,5 +5,23 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;led_signals(0)&quot; LOC = U16 |&gt; [nexys3.ucf(4)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;led_signals(1)&quot; LOC = V16 |&gt; [nexys3.ucf(5)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;led_signals(2)&quot; LOC = U15 |&gt; [nexys3.ucf(6)]&apos; could not be found and so the Locate constraint will be removed.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;led_signals(0)&quot; LOC = U16 |&gt; [nexys3.ucf(4)]</arg> is overridden on the design object <arg fmt="%s" index="2">led_signals&lt;0&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;led_signals&lt;0&gt;&quot; LOC = U16;&gt; [nexys3.ucf(12)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;led_signals(1)&quot; LOC = V16 |&gt; [nexys3.ucf(5)]</arg> is overridden on the design object <arg fmt="%s" index="2">led_signals&lt;1&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;led_signals&lt;1&gt;&quot; LOC = V16;&gt; [nexys3.ucf(13)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;led_signals(2)&quot; LOC = U15 |&gt; [nexys3.ucf(6)]</arg> is overridden on the design object <arg fmt="%s" index="2">led_signals&lt;2&gt;</arg> by the constraint <arg fmt="%s" index="3">&lt;NET &quot;led_signals&lt;2&gt;&quot; LOC = U15;&gt; [nexys3.ucf(14)]</arg>.
+</msg>
+
 </messages>
 
