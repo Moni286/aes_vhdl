@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity toplevel is
     Port ( clk : in  STD_LOGIC;
            clr : in  STD_LOGIC;
-			  r : out std_logic_vector(3 downto 0);
+			  --r : out std_logic_vector(3 downto 0);
            originalKey : in  STD_LOGIC_VECTOR (127 downto 0);
            plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
            ciphertext : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -72,7 +72,7 @@ begin
 roundCounter: roundCount  port map(clk, clr, roundNumber);
 keyScheduler: keySchedule port map(clk, clr, roundNumber, originalKey, roundKey);
 encrypter:	  encrypt     port map(clk, clr, roundNumber, roundKey, plaintext, ciphertext);
-r <= roundNumber;
+--r <= roundNumber;
 
 PROCESS(clk)
 BEGIN

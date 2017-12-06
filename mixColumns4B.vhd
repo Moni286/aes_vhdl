@@ -49,14 +49,14 @@ architecture Behavioral of mixColumns4B is
 		q : out STD_LOGIC_VECTOR (7 downto 0));
 	END COMPONENT x3;
 	
-	signal b0x2 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b1x2 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b2x2 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b3x2 : STD_LOGIC_VECTOR(7 downto 0) := X"00";	
-	signal b0x3 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b1x3 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b2x3 : STD_LOGIC_VECTOR(7 downto 0) := X"00";
-	signal b3x3 : STD_LOGIC_VECTOR(7 downto 0) := X"00";	
+	signal b0x2 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b1x2 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b2x2 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b3x2 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b0x3 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b1x3 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b2x3 : STD_LOGIC_VECTOR(7 downto 0);
+	signal b3x3 : STD_LOGIC_VECTOR(7 downto 0);
 begin
 
 b0x2lut: x2 port map(clk, d(31 downto 24), b0x2); 

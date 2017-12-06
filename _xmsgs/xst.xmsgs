@@ -5,9 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\HP\Desktop\University\Academics\Capstone\aes\fpga_impl.vhd</arg>&quot; line <arg fmt="%s" index="2">147</arg>: Output port &lt;<arg fmt="%s" index="3">r</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">encrypt</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
@@ -20,86 +17,67 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B3/s1/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B3/s0/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B3/s2/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B3/s3/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B2/s0/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B2/s2/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B2/s1/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B2/s3/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B1/s1/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B1/s0/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B1/s2/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B0/s0/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B1/s3/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B0/s1/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B0/s2/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subBytesLayer/sbox4B0/s3/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subKeyBytes/s2/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subKeyBytes/s3/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subKeyBytes/s1/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">subKeyBytes/s0/Mram_q</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subKeyBytes/s2/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subKeyBytes/s3/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subKeyBytes/s2/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="3216" delta="new" >HDL ADVISOR - LUT implementation is currently selected for the RAM &lt;<arg fmt="%s" index="1">Mram_q</arg>&gt;. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subKeyBytes/s1/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subKeyBytes/s0/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subKeyBytes/s1/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_7_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B3/s1/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B3/s0/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B3/s1/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_9_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B3/s2/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B3/s3/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B3/s2/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_79</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_79_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B2/s0/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B2/s2/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B2/s0/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_87</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_87_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B2/s1/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B2/s3/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B2/s1/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_95</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_95_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B1/s1/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B1/s0/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B1/s1/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_99</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_99_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B1/s2/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B0/s0/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B1/s2/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_23_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B1/s3/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B0/s1/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B1/s3/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_31_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2697" delta="old" >Unit &lt;<arg fmt="%s" index="1">MTP_</arg>&gt; : the RAMs &lt;<arg fmt="%s" index="2">subBytesLayer/sbox4B0/s2/Mram_q</arg>&gt;, &lt;<arg fmt="%s" index="3">subBytesLayer/sbox4B0/s3/Mram_q</arg>&gt; are packed into the single block RAM &lt;<arg fmt="%s" index="4">subBytesLayer/sbox4B0/s2/Mram_q1</arg>&gt;
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_111</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_111_BRB2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">recv/r_SM_Main_FSM_FFd1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga_impl</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;recv/r_RX_DV&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_39</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_39_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_47</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_47_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_119</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_119_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_55</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_55_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_127</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_127_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_63</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_63_BRB2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">keyScheduler/keyRegister/q_71</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">toplevel</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;encrypter/storedState/q_71_BRB2&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="old" > (*) More than 100% of Device resources are used
 </msg>
 
 </messages>

@@ -90,9 +90,9 @@ mixColumnsLayer: mixColumns port map(clk, from_shiftRows, from_mixColumns);
 PROCESS(clk)
 BEGIN
 	if rising_edge(clk) then
-	if roundNumber = "1011" then
-		ciphertext <= from_register;
-	end if;
+		if roundNumber = "1011" then
+			ciphertext <= from_register;
+		end if;
 	end if;
 	
 END PROCESS;
