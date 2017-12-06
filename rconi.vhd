@@ -42,6 +42,6 @@ architecture Behavioral of rconi is
 	(X"8D", X"01", X"02", X"04", X"08", X"10", X"20", X"40", X"80", X"1B", X"36", X"6C", X"D8", X"AB", X"4D", X"9A");
 	
 begin
-	q <= rconValues(to_integer(unsigned(d(3 downto 0))));
+	q <= rconValues(to_integer(unsigned(d)));
 end Behavioral;
 

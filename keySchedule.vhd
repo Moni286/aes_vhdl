@@ -75,20 +75,20 @@ architecture Behavioral of keySchedule is
 	signal from_register: STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
 begin
 
-initMux : mux16B2x1 port map(roundNumber, originalKey, q, from_mux);
+-- initMux : mux16B2x1 port map(roundNumber, originalKey, q, from_mux);
 
-to_sbox4B <= from_register(23 downto 0) & from_register(31 downto 24);
+to_sbox4B <= originalKey(23 downto 0) & originalKey(31 downto 24);
 
 subKeyBytes : sbox4B port map (clk, to_sbox4B, from_sbox4B); 
 rconBytes   : rcon	port map (clk, roundNumber, from_sbox4B, from_rcon);
 
-q(127 downto 96) <= from_rcon      	 xor from_register(127 downto 96);
-q( 95 downto 64) <= q(127 downto 96) xor from_register( 95 downto 64);
-q( 63 downto 32) <= q( 95 downto 64) xor from_register( 63 downto 32);
-q( 31 downto  0) <= q( 63 downto 32) xor from_register( 31 downto  0);
+q(127 downto 96) <= from_rcon      	 xor originalKey(127 downto 96);
+q( 95 downto 64) <= q(127 downto 96) xor originalKey( 95 downto 64);
+q( 63 downto 32) <= q( 95 downto 64) xor originalKey( 63 downto 32);
+q( 31 downto  0) <= q( 63 downto 32) xor originalKey( 31 downto  0);
 
-keyRegister : reg16B port map(clk, clr, from_mux, from_register);
-roundKey <= from_mux;
+keyRegister : reg16B port map(clk, clr, q, from_register);
+roundKey <= from_register;
 end Behavioral;
 
 
