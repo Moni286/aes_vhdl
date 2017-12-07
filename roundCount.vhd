@@ -50,10 +50,10 @@ begin
 			if clr = '1' then
 				temp <= X"B";
 			else
-				if temp = X"B" then
-					temp <= X"0";
-				else
+				if temp < X"B" then
 					temp <= temp + 1;
+				else
+					temp <= X"0";
 				end if;
 			end if;
 		end if;

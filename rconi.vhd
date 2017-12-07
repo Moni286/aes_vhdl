@@ -30,8 +30,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity rconi is
-    Port ( clk : in  STD_LOGIC;
-           d : in  STD_LOGIC_VECTOR (3 downto 0);
+    Port ( d : in  STD_LOGIC_VECTOR (3 downto 0);
            q : out  STD_LOGIC_VECTOR (7 downto 0));
 end rconi;
 
@@ -39,9 +38,9 @@ architecture Behavioral of rconi is
 
 	type t_rcon is array (0 to 15) of STD_LOGIC_VECTOR(7 downto 0);
 	constant rconValues : t_rcon := 
-	(X"8D", X"01", X"02", X"04", X"08", X"10", X"20", X"40", X"80", X"1B", X"36", X"6C", X"D8", X"AB", X"4D", X"9A");
+	(X"01", X"02", X"04", X"08", X"10", X"20", X"40", X"80", X"1B", X"36", X"6C", X"D8", X"AB", X"4D", X"9A", X"8D");
 	
 begin
-	q <= rconValues(to_integer(unsigned(d)));
+	q <= rconValues(to_integer(unsigned(d(3 downto 0))));
 end Behavioral;
 

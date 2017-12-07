@@ -56,31 +56,48 @@ architecture Behavioral of toplevel is
 			roundKey : out  STD_LOGIC_VECTOR (127 downto 0));
 	END COMPONENT keySchedule;
 
-	COMPONENT encrypt PORT ( 
-		clk : in  STD_LOGIC;
-		clr : in  STD_LOGIC;
-		roundNumber : in  STD_LOGIC_VECTOR (3 downto 0);
-		roundKey : in  STD_LOGIC_VECTOR (127 downto 0);
-		plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
-		ciphertext : out  STD_LOGIC_VECTOR (127 downto 0));
-	END COMPONENT encrypt;
+	COMPONENT encAllRounds is
+    Port ( plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
+           roundkeys : in  STD_LOGIC_VECTOR (1407 downto 0);
+           clk : in  STD_LOGIC;
+			  clr : in STD_LOGIC;
+           ciphertext : out  STD_LOGIC_VECTOR (127 downto 0));
+	end COMPONENT encAllRounds;
+	
+	COMPONENT roundKeysReg is
+    Port ( clk : in  STD_LOGIC;
+           w : in  STD_LOGIC;
+			  index : in STD_LOGIC_VECTOR (3 downto 0);
+           rkey : in  STD_LOGIC_VECTOR (127 downto 0);
+           allKeys : out  STD_LOGIC_VECTOR (1407 downto 0));
+	end COMPONENT roundKeysReg;
 	
 	signal roundNumber : STD_LOGIC_VECTOR(3 downto 0);
 	signal roundKey    : STD_LOGIC_VECTOR(127 downto 0) := (others => '0');
+	signal allKeys		 : STD_LOGIC_VECTOR (1407 downto 0);
+	signal keys			 : STD_LOGIC_VECTOR (1407 downto 0);
+	signal keysGend	 : STD_LOGIC := '1';
 begin
+
+keys <= allKeys(1407 downto 128) & originalKey;
 
 roundCounter: roundCount  port map(clk, clr, roundNumber);
 keyScheduler: keySchedule port map(clk, clr, roundNumber, originalKey, roundKey);
-encrypter:	  encrypt     port map(clk, clr, roundNumber, roundKey, plaintext, ciphertext);
---r <= roundNumber;
+encrypter	: encAllRounds PORT MAP(plaintext, keys, clk, keysGend, ciphertext);
+allRoundKeys: roundKeysReg port map(clk, '1', roundNumber, roundKey, allKeys);
 
 PROCESS(clk)
 BEGIN
 	if rising_edge(clk) then
 		if roundNumber = "1010" and clr = '0' then
 			done <= '1';
+			keysGend <= '0';
 		else
 			done <= '0';
+		end if;
+		
+		if clr = '1' then
+			keysGend <= '1';
 		end if;
 		
 	end if;

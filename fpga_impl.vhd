@@ -102,7 +102,6 @@ end COMPONENT UART_RX;
 COMPONENT toplevel is
     Port ( clk : in  STD_LOGIC;
            clr : in  STD_LOGIC;
-			  r : out std_logic_vector(3 downto 0);
            originalKey : in  STD_LOGIC_VECTOR (127 downto 0);
            plaintext : in  STD_LOGIC_VECTOR (127 downto 0);
            ciphertext : out  STD_LOGIC_VECTOR (127 downto 0);
@@ -144,7 +143,7 @@ begin
 	pt_buff : pt_buffer PORT MAP(rx_byte, pt_w, index, clk, pt);
 	key_buff : pt_buffer PORT MAP(rx_byte, key_w, index, clk, key);
 	
-	encrypt : toplevel PORT MAP(clk, enc_reset, open, key, pt, ct, enc_done);
+	encrypt : toplevel PORT MAP(clk, enc_reset, key, pt, ct, enc_done);
 	
 	ct_buff : ct_buf PORT MAP(ct, out_w, clk, index, ct_byte);
 	 

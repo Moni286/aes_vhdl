@@ -30,21 +30,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity rcon is
-    Port ( clk : in  STD_LOGIC;
-			  roundNumber : in STD_LOGIC_VECTOR(3 downto 0);
+    Port ( roundNumber : in STD_LOGIC_VECTOR(3 downto 0);
            d : in  STD_LOGIC_VECTOR (31 downto 0);
            q : out STD_LOGIC_VECTOR (31 downto 0));
 end rcon;
 
 architecture Behavioral of rcon is
 	COMPONENT rconi PORT ( 
-		clk : in  STD_LOGIC;
 		d : in  STD_LOGIC_VECTOR (3 downto 0);
 		q : out STD_LOGIC_VECTOR (7 downto 0));
 	END COMPONENT rconi;
 	signal rconiValue : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 begin
-calculate_rconi: rconi port map (clk, roundNumber, rconiValue);
+calculate_rconi: rconi port map (roundNumber, rconiValue);
 
 q(31 downto 24) <= d(31 downto 24) xor rconiValue;
 q(23 downto 00) <= d(23 downto 00);

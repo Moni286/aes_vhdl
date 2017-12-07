@@ -30,8 +30,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity x2 is
-    Port ( clk : in  STD_LOGIC;
-           d : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( d : in  STD_LOGIC_VECTOR (7 downto 0);
            q : out  STD_LOGIC_VECTOR (7 downto 0));
 end x2;
 

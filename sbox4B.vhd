@@ -30,25 +30,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity sbox4B is
-    Port ( clk : in  STD_LOGIC;
-           d : in  STD_LOGIC_VECTOR (31 downto 0);
+    Port ( d : in  STD_LOGIC_VECTOR (31 downto 0);
            q : out  STD_LOGIC_VECTOR (31 downto 0));
 end sbox4B;
 
 architecture Behavioral of sbox4B is
 
 	COMPONENT sbox PORT ( 
-		clk : in  STD_LOGIC;
 		d : in  STD_LOGIC_VECTOR (7 downto 0);
 		q : out  STD_LOGIC_VECTOR (7 downto 0));
 	END COMPONENT sbox;
 	
 begin
 
-s0: sbox port map(clk, d(31 downto 24), q(31 downto 24));
-s1: sbox port map(clk, d(23 downto 16), q(23 downto 16));
-s2: sbox port map(clk, d(15 downto 08), q(15 downto 08));
-s3: sbox port map(clk, d(07 downto 00), q(07 downto 00));
+s0: sbox port map(d(31 downto 24), q(31 downto 24));
+s1: sbox port map(d(23 downto 16), q(23 downto 16));
+s2: sbox port map(d(15 downto 08), q(15 downto 08));
+s3: sbox port map(d(07 downto 00), q(07 downto 00));
 
 end Behavioral;
 

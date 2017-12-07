@@ -30,23 +30,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity mixColumns is
-    Port ( clk : in  STD_LOGIC;
-           d : in  STD_LOGIC_VECTOR (127 downto 0);
+    Port ( d : in  STD_LOGIC_VECTOR (127 downto 0);
            q : out  STD_LOGIC_VECTOR (127 downto 0));
 end mixColumns;
 
 architecture Behavioral of mixColumns is
 	COMPONENT mixColumns4B PORT (
-		clk : in STD_LOGIC;
 		d : in  STD_LOGIC_VECTOR (31 downto 0);
 		q : out STD_LOGIC_VECTOR (31 downto 0));
 	END COMPONENT mixColumns4B;
 begin
 
-mixColumns4B0: mixColumns4B port map (clk, d(127 downto 96), q(127 downto 96));
-mixColumns4B1: mixColumns4B port map (clk, d( 95 downto 64), q( 95 downto 64));
-mixColumns4B2: mixColumns4B port map (clk, d( 63 downto 32), q( 63 downto 32));
-mixColumns4B3: mixColumns4B port map (clk, d( 31 downto  0), q( 31 downto  0));
+mixColumns4B0: mixColumns4B port map (d(127 downto 96), q(127 downto 96));
+mixColumns4B1: mixColumns4B port map (d( 95 downto 64), q( 95 downto 64));
+mixColumns4B2: mixColumns4B port map (d( 63 downto 32), q( 63 downto 32));
+mixColumns4B3: mixColumns4B port map (d( 31 downto  0), q( 31 downto  0));
 
 end Behavioral;
 
