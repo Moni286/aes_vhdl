@@ -43,7 +43,7 @@ ARCHITECTURE behavior OF toplevelTest IS
     PORT(
          clk : IN  std_logic;
          clr : IN  std_logic;
-         r : OUT  std_logic_vector(3 downto 0);
+         --r : OUT  std_logic_vector(3 downto 0);
          originalKey : IN  std_logic_vector(127 downto 0);
          plaintext : IN  std_logic_vector(127 downto 0);
          ciphertext : OUT  std_logic_vector(127 downto 0);
@@ -72,7 +72,6 @@ BEGIN
    uut: toplevel PORT MAP (
           clk => clk,
           clr => clr,
-          r => r,
           originalKey => originalKey,
           plaintext => plaintext,
           ciphertext => ciphertext,

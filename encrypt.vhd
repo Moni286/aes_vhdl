@@ -39,14 +39,6 @@ entity encrypt is
 end encrypt;
 
 architecture Behavioral of encrypt is
-
-	COMPONENT mux16B3x1 PORT( 
-		sel: in  STD_LOGIC_VECTOR (  3 downto 0);
-		d0 : in  STD_LOGIC_VECTOR (127 downto 0);
-		d1 : in  STD_LOGIC_VECTOR (127 downto 0);
-		dA : in  STD_LOGIC_VECTOR (127 downto 0);
-		q : out  STD_LOGIC_VECTOR (127 downto 0));
-	END COMPONENT mux16B3x1;
 	
 	COMPONENT reg16B PORT ( 
 		clk : in  STD_LOGIC;
@@ -74,27 +66,32 @@ architecture Behavioral of encrypt is
 	
 	signal from_mux : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
 	signal from_addRoundKey : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
-	signal from_register : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
+	signal from_reg1 : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
+	signal from_reg2 : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
+	signal from_reg3 : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
 	signal from_subBytes : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
 	signal from_shiftRows : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
 	signal from_mixColumns : STD_LOGIC_VECTOR (127 downto 0) := (others => '0');
 begin
 
-roundMux: mux16B3x1 port map(roundNumber, plaintext, from_mixColumns, from_shiftRows, from_mux);
-from_addRoundKey <= from_mux xor roundKey;
-storedState : reg16B port map(clk, clr, from_addRoundKey, from_register);
-subBytesLayer : sbox16B port map(clk, from_register, from_subBytes);
-shiftRowsLayer : shiftRows port map(from_subBytes, from_shiftRows);
-mixColumnsLayer: mixColumns port map(clk, from_shiftRows, from_mixColumns);
 
-PROCESS(clk)
-BEGIN
-	if rising_edge(clk) then
-		if roundNumber = "1011" then
-			ciphertext <= from_register;
-		end if;
-	end if;
-	
-END PROCESS;
+
+-- roundMux: mux16B3x1 port map(roundNumber, plaintext, from_mixColumns, from_shiftRows, from_mux);
+with roundNumber select from_mux <=
+	plaintext when "0001",
+	from_reg3 when others;
+
+shiftRowsLayer : shiftRows port map(from_mux, from_shiftRows);
+storedState1 : reg16B port map(clk, clr, from_shiftRows, from_reg1);
+
+subBytesLayer : sbox16B port map(clk, from_reg1, from_subBytes);
+storedState2 : reg16B port map(clk, clr, from_subBytes, from_reg2);
+
+mixColumnsLayer: mixColumns port map(clk, from_reg2, from_mixColumns);
+from_addRoundKey <= from_mixColumns xor roundKey;
+storedState3 : reg16B port map(clk, clr, from_addRoundKey, from_reg3);
+ciphertext <= from_reg3;
+
+
 end Behavioral;
 
